@@ -76,7 +76,7 @@ enum combos{
   KL_MOUSE2,
   JL_LAYER2,
   DF_TAB
-}
+};
 
 const uint16_t PROGMEM my_jk[] = {KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM my_kl[] = {KC_K, KC_L, COMBO_END};
