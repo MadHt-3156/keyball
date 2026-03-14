@@ -19,6 +19,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 
 // Key matrix parameters
+#define DYNAMIC_KEYMAP_LAYER_COUNT 6
+
 #define MATRIX_ROWS         (4 * 2)  // split keyboard
 #define MATRIX_COLS         6
 #define MATRIX_ROW_PINS     { F4, F5, F6, F7 }

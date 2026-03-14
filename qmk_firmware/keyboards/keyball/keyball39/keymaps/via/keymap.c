@@ -69,3 +69,26 @@ void oledkit_render_info_user(void) {
     keyball_oled_render_layerinfo();
 }
 #endif
+
+#ifdef COMBO_ENABLE
+enum combos{
+  JK_MOUSE1,
+  KL_MOUSE2,
+  JL_LAYER2,
+  DF_TAB
+}
+
+const uint16_t PROGMEM my_jk[] = {KC_J, KC_K, COMBO_END};
+const uint16_t PROGMEM my_kl[] = {KC_K, KC_L, COMBO_END};
+const uint16_t PROGMEM my_jl[] = {KC_J, KC_L, COMBO_END};
+const uint16_t PROGMEM my_df[] = {KC_D, KC_F, COMBO_END};
+
+
+combo_t key_combos[] = {
+[JK_MOUSE1] = COMBO(my_jk, MS_BTN1),
+[KL_MOUSE2] = COMBO(my_kl, MS_BTN2),
+[JL_LAYER2] = COMBO(my_jl, LT(3,KC_J)),
+[DF_TAB] = COMBO(my_df,KC_TAB),
+
+};
+#endif
